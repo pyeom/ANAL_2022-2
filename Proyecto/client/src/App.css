@@ -1,0 +1,34 @@
+.selector {
+    text-align: center;
+    background-color: #114B5F;
+    padding: 20px; 
+    ;
+}
+
+.button {
+    background-color: #E4FDE1;
+    color: black;
+    border-radius: 15px;
+    border-color: #514f4f;
+    padding: 20px; 
+    ;
+}
+
+.button:hover {
+    background-color: #456990;
+    color: black;
+    border-radius: 15px;
+    border-color: #514f4f;
+    padding: 20px; 
+    ;
+}
+
+.header {
+    text-align: center;
+    background-color: #456990;
+    padding: 10px;
+}
+
+.center {
+    text-align: center;
+}

@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "ec5dc469-12e1-4a41-b9ff-5d2fde34c207",
+		"name": "A&DSw 2022-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sensor Radón",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHVtbm9zQGFsdW1ub3Mub3JnIiwic2NvcGVzIjpbIkNVU1RPTUVSX1VTRVIiXSwidXNlcklkIjoiYmJjMmNjNzAtY2FlNS0xMWVjLWI0YjEtMWJjYjhmNWRhYTc3IiwiZW5hYmxlZCI6dHJ1ZSwiaXNQdWJsaWMiOmZhbHNlLCJ0ZW5hbnRJZCI6ImMzOWJiMDMwLWI5Y2MtMTFlYy1iMGZiLWYxMWNhYTU4NTMzOSIsImN1c3RvbWVySWQiOiI1MTZlMWFjMC1jYWUzLTExZWMtYjRiMS0xYmNiOGY1ZGFhNzciLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2NTA0OTg2MiwiZXhwIjoxNjY1MDU4ODYyfQ.9nxoiXO3-O3iCghqy8y0gTNeXe3w0Qzn9rjkTpoRgF8SqzxgbnB3iz5SvkkmDnJsfJs0cLFA-W-TYicLXK81IA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://18.214.103.65:8080/api/plugins/telemetry/DEVICE/723d0580-452d-11ed-b4b1-1bcb8f5daa77/values/timeseries?keys=Fecha,Radon&startTs=1265046352083&endTs=1665029708303",
+					"protocol": "http",
+					"host": [
+						"18",
+						"214",
+						"103",
+						"65"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plugins",
+						"telemetry",
+						"DEVICE",
+						"723d0580-452d-11ed-b4b1-1bcb8f5daa77",
+						"values",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "keys",
+							"value": "Fecha,Radon",
+							"description": "- Fecha: fecha de recolección de muestra (d/mm/yy h:mm)\n- Radón: Se utiliza para conocer la estabilidad atmosférica. Se mide en Bq/(m^3)"
+						},
+						{
+							"key": "startTs",
+							"value": "1265046352083"
+						},
+						{
+							"key": "endTs",
+							"value": "1665029708303"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sensor Multi-parámetro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHVtbm9zQGFsdW1ub3Mub3JnIiwic2NvcGVzIjpbIkNVU1RPTUVSX1VTRVIiXSwidXNlcklkIjoiYmJjMmNjNzAtY2FlNS0xMWVjLWI0YjEtMWJjYjhmNWRhYTc3IiwiZW5hYmxlZCI6dHJ1ZSwiaXNQdWJsaWMiOmZhbHNlLCJ0ZW5hbnRJZCI6ImMzOWJiMDMwLWI5Y2MtMTFlYy1iMGZiLWYxMWNhYTU4NTMzOSIsImN1c3RvbWVySWQiOiI1MTZlMWFjMC1jYWUzLTExZWMtYjRiMS0xYmNiOGY1ZGFhNzciLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2NTA0OTg2MiwiZXhwIjoxNjY1MDU4ODYyfQ.9nxoiXO3-O3iCghqy8y0gTNeXe3w0Qzn9rjkTpoRgF8SqzxgbnB3iz5SvkkmDnJsfJs0cLFA-W-TYicLXK81IA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://18.214.103.65:8080/api/plugins/telemetry/DEVICE/101d2fe0-454d-11ed-b4b1-1bcb8f5daa77/values/timeseries?keys=TIMESTAMP,WS,WD,Temp,RH,BP,Depth &startTs=1265046352083&endTs=1665043961492",
+					"protocol": "http",
+					"host": [
+						"18",
+						"214",
+						"103",
+						"65"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plugins",
+						"telemetry",
+						"DEVICE",
+						"101d2fe0-454d-11ed-b4b1-1bcb8f5daa77",
+						"values",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "keys",
+							"value": "TIMESTAMP,WS,WD,Temp,RH,BP,Depth ",
+							"description": "- TIMESTAMP: fecha de recolección de muestra (YYYY/mm/dd hh:mm:ss)\n- WS: Velocidad del viento (m/s)\n- WD: Dirección del viento (grados)\n- Temp: Temperatura (C)\n- RH: Humedad relativa (%)\n- BP: Presión barométrica (mbar)\n- Depth: Altura de nieve"
+						},
+						{
+							"key": "startTs",
+							"value": "1265046352083"
+						},
+						{
+							"key": "endTs",
+							"value": "1665043961492"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sensor BC-Magee (Black Carbon)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHVtbm9zQGFsdW1ub3Mub3JnIiwic2NvcGVzIjpbIkNVU1RPTUVSX1VTRVIiXSwidXNlcklkIjoiYmJjMmNjNzAtY2FlNS0xMWVjLWI0YjEtMWJjYjhmNWRhYTc3IiwiZW5hYmxlZCI6dHJ1ZSwiaXNQdWJsaWMiOmZhbHNlLCJ0ZW5hbnRJZCI6ImMzOWJiMDMwLWI5Y2MtMTFlYy1iMGZiLWYxMWNhYTU4NTMzOSIsImN1c3RvbWVySWQiOiI1MTZlMWFjMC1jYWUzLTExZWMtYjRiMS0xYmNiOGY1ZGFhNzciLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2NTA0OTg2MiwiZXhwIjoxNjY1MDU4ODYyfQ.9nxoiXO3-O3iCghqy8y0gTNeXe3w0Qzn9rjkTpoRgF8SqzxgbnB3iz5SvkkmDnJsfJs0cLFA-W-TYicLXK81IA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://18.214.103.65:8080/api/plugins/telemetry/DEVICE/8c5ad790-454f-11ed-b4b1-1bcb8f5daa77/values/timeseries?keys=Date,Time,BC1,BC2,BC3,BC4,BC5,BC6,BC7&startTs=1265046352083&endTs=1665044358966",
+					"protocol": "http",
+					"host": [
+						"18",
+						"214",
+						"103",
+						"65"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plugins",
+						"telemetry",
+						"DEVICE",
+						"8c5ad790-454f-11ed-b4b1-1bcb8f5daa77",
+						"values",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "keys",
+							"value": "Date,Time,BC1,BC2,BC3,BC4,BC5,BC6,BC7",
+							"description": "Mide el BC en 7 longitudes de onda (nm) diferentes. Esta variable se expresa en ng/m^3\n- Date (yyyy/MM/dd)\n- Time (hh:mm:ss)\n- BC1 (concentración de BC medida a 370nm)\n- BC2 (a 470nm)\n- BC3 (a 520nm)\n- BC4 (a 590nm)\n- BC5 (a 660nm). \n- BC6 (a 880nm). \n- BC7 (a 990 nm)"
+						},
+						{
+							"key": "startTs",
+							"value": "1265046352083"
+						},
+						{
+							"key": "endTs",
+							"value": "1665044358966"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sensor BC-MAAP (Black Carbon)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHVtbm9zQGFsdW1ub3Mub3JnIiwic2NvcGVzIjpbIkNVU1RPTUVSX1VTRVIiXSwidXNlcklkIjoiYmJjMmNjNzAtY2FlNS0xMWVjLWI0YjEtMWJjYjhmNWRhYTc3IiwiZW5hYmxlZCI6dHJ1ZSwiaXNQdWJsaWMiOmZhbHNlLCJ0ZW5hbnRJZCI6ImMzOWJiMDMwLWI5Y2MtMTFlYy1iMGZiLWYxMWNhYTU4NTMzOSIsImN1c3RvbWVySWQiOiI1MTZlMWFjMC1jYWUzLTExZWMtYjRiMS0xYmNiOGY1ZGFhNzciLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2NTA0OTg2MiwiZXhwIjoxNjY1MDU4ODYyfQ.9nxoiXO3-O3iCghqy8y0gTNeXe3w0Qzn9rjkTpoRgF8SqzxgbnB3iz5SvkkmDnJsfJs0cLFA-W-TYicLXK81IA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://18.214.103.65:8080/api/plugins/telemetry/DEVICE/6a4dd7a0-4550-11ed-b4b1-1bcb8f5daa77/values/timeseries?keys=fecha,hora,BC&startTs=1265046352083&endTs=1665044739122",
+					"protocol": "http",
+					"host": [
+						"18",
+						"214",
+						"103",
+						"65"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plugins",
+						"telemetry",
+						"DEVICE",
+						"6a4dd7a0-4550-11ed-b4b1-1bcb8f5daa77",
+						"values",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "keys",
+							"value": "fecha,hora,BC",
+							"description": "-Fecha: YY-mm-d\n-Hora h:mm\n- BC (a 360nm): ug/m^3"
+						},
+						{
+							"key": "startTs",
+							"value": "1265046352083"
+						},
+						{
+							"key": "endTs",
+							"value": "1665044739122"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sensor Radiómetro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHVtbm9zQGFsdW1ub3Mub3JnIiwic2NvcGVzIjpbIkNVU1RPTUVSX1VTRVIiXSwidXNlcklkIjoiYmJjMmNjNzAtY2FlNS0xMWVjLWI0YjEtMWJjYjhmNWRhYTc3IiwiZW5hYmxlZCI6dHJ1ZSwiaXNQdWJsaWMiOmZhbHNlLCJ0ZW5hbnRJZCI6ImMzOWJiMDMwLWI5Y2MtMTFlYy1iMGZiLWYxMWNhYTU4NTMzOSIsImN1c3RvbWVySWQiOiI1MTZlMWFjMC1jYWUzLTExZWMtYjRiMS0xYmNiOGY1ZGFhNzciLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2NTA0OTg2MiwiZXhwIjoxNjY1MDU4ODYyfQ.9nxoiXO3-O3iCghqy8y0gTNeXe3w0Qzn9rjkTpoRgF8SqzxgbnB3iz5SvkkmDnJsfJs0cLFA-W-TYicLXK81IA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://18.214.103.65:8080/api/plugins/telemetry/DEVICE/efdd9590-4550-11ed-b4b1-1bcb8f5daa77/values/timeseries?keys=Fecha,Hora,Albedo&startTs=1265046352083&endTs=1665044947549",
+					"protocol": "http",
+					"host": [
+						"18",
+						"214",
+						"103",
+						"65"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plugins",
+						"telemetry",
+						"DEVICE",
+						"efdd9590-4550-11ed-b4b1-1bcb8f5daa77",
+						"values",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "keys",
+							"value": "Fecha,Hora,Albedo",
+							"description": "-Fecha: m-dd-yyyy\n-Hora h:mm:ss\n- Albedo (%)"
+						},
+						{
+							"key": "startTs",
+							"value": "1265046352083"
+						},
+						{
+							"key": "endTs",
+							"value": "1665044947549"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sensor MP-Grimm",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHVtbm9zQGFsdW1ub3Mub3JnIiwic2NvcGVzIjpbIkNVU1RPTUVSX1VTRVIiXSwidXNlcklkIjoiYmJjMmNjNzAtY2FlNS0xMWVjLWI0YjEtMWJjYjhmNWRhYTc3IiwiZW5hYmxlZCI6dHJ1ZSwiaXNQdWJsaWMiOmZhbHNlLCJ0ZW5hbnRJZCI6ImMzOWJiMDMwLWI5Y2MtMTFlYy1iMGZiLWYxMWNhYTU4NTMzOSIsImN1c3RvbWVySWQiOiI1MTZlMWFjMC1jYWUzLTExZWMtYjRiMS0xYmNiOGY1ZGFhNzciLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2NTA0OTg2MiwiZXhwIjoxNjY1MDU4ODYyfQ.9nxoiXO3-O3iCghqy8y0gTNeXe3w0Qzn9rjkTpoRgF8SqzxgbnB3iz5SvkkmDnJsfJs0cLFA-W-TYicLXK81IA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://18.214.103.65:8080/api/plugins/telemetry/DEVICE/99ce9f80-4557-11ed-b4b1-1bcb8f5daa77/values/timeseries?keys=Fecha,TSP,PM10,PM4,PM2.5,PM1&startTs=1265046352083&endTs=1665048457821",
+					"protocol": "http",
+					"host": [
+						"18",
+						"214",
+						"103",
+						"65"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plugins",
+						"telemetry",
+						"DEVICE",
+						"99ce9f80-4557-11ed-b4b1-1bcb8f5daa77",
+						"values",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "keys",
+							"value": "Fecha,TSP,PM10,PM4,PM2.5,PM1",
+							"description": "- Fecha: d/m/yyyy h:mm   \n- TSP: Material sólido suspendido \n- PM10: Material particulado con diámetro menor a 10 micras \n- PM4: Material particulado con diámetro menor a 4 micras \n- PM2.5: Material particulado con diámetro menor a 2.5 micras\n- PM1 : Material particulado con diámetro menor a 1 micra "
+						},
+						{
+							"key": "startTs",
+							"value": "1265046352083"
+						},
+						{
+							"key": "endTs",
+							"value": "1665048457821"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"alumnos@alumnos.org\", \"password\":\"m7a/s99\"}"
+				},
+				"url": {
+					"raw": "http://18.214.103.65:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"18",
+						"214",
+						"103",
+						"65"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
